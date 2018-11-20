@@ -12,22 +12,22 @@ function [ ] = imgRbg2Gray( Img )
 % gdata = rgb2gray(data);
 % imshow(gdata);
  
-%显示原图
+%% 显示原图
 subplot(221)
 m = imread(Img);
 imshow(m);
 title('原始图像');
-%对图像进行灰度化处理
+%% 对图像进行灰度化处理
 subplot(222)
 gdata = rgb2gray(m);
 imwrite(gdata,'./ImageProcessing/Result/result01.png'); % 将灰度化图像保存在result文件夹中
 imshow(gdata);
 title('灰度化处理后图像');
-%显示彩色图
+%% 显示彩色图
 subplot(223)
 imshow(m);
 title('彩色图像');
-%对图像进行二值化处理
+%% 对彩色图像进行二值化处理
 subplot(224)
 n = graythresh(m);
 im2bw(m,n);
