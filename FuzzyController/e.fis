@@ -1,0 +1,50 @@
+[System]
+Name='e'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[-6 6]
+NumMFs=7
+MF1='NB':'trapmf',[-7.8 -6.2 -5.8 -4.2]
+MF2='NM':'trapmf',[-5.8 -4.2 -3.8 -2.2]
+MF3='NS':'trapmf',[-3.8 -2.2 -1.8 -0.2]
+MF4='ZO':'trapmf',[-1.8 -0.2 0.2 1.8]
+MF5='PS':'trapmf',[0.2 1.8 2.2 3.8]
+MF6='PM':'trapmf',[2.2 3.8 4.2 5.8]
+MF7='PB':'trapmf',[4.2 5.8 6.2 7.8]
+
+[Input2]
+Name='ec'
+Range=[-6 6]
+NumMFs=7
+MF1='NB':'trapmf',[-7.8 -6.2 -5.8 -4.2]
+MF2='NM':'trapmf',[-5.8 -4.2 -3.8 -2.2]
+MF3='NS':'trapmf',[-3.8 -2.2 -1.8 -0.2]
+MF4='ZO':'trapmf',[-1.8 -0.2 0.2 1.8]
+MF5='PS':'trapmf',[0.2 1.8 2.2 3.8]
+MF6='PM':'trapmf',[2.2 3.8 4.2 5.8]
+MF7='PB':'trapmf',[4.2 5.8 6.2 7.8]
+
+[Output1]
+Name='u'
+Range=[-9 9]
+NumMFs=7
+MF1='NB':'trimf',[-11.9047619047619 -8.90476190476191 -5.90476190476191]
+MF2='NM':'trimf',[-9 -6 -3]
+MF3='NS':'trimf',[-6 -3 0]
+MF4='ZO':'trimf',[-3 0 3]
+MF5='PS':'trimf',[0 3 6]
+MF6='PM':'trimf',[3 6 9]
+MF7='PB':'trimf',[6 9 12]
+
+[Rules]
